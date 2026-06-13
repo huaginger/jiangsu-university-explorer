@@ -1,0 +1,46 @@
+{
+  "sourcePages": [
+    66,
+    226
+  ],
+  "pageCount": 161,
+  "groupCount": 2927,
+  "programCount": 15647,
+  "batchCounts": {
+    "提前录取本科院校": 240,
+    "本科院校": 2687
+  },
+  "scoreMatchedGroups": 2193,
+  "scoreUnmatchedGroups": 734,
+  "declaredPlanTotal": 147593,
+  "groupsWithDeclaredPlanCount": 2367,
+  "groupsPassingPlanSumCheck": 1016,
+  "programsMissingPlanCount": 9467,
+  "programPlanCountsInferredFromGroupTotal": 747,
+  "groupPlanCountsCorrectedAsNumericOutliers": 4,
+  "duplicateIdsAcrossBatches": [
+    "2206-06",
+    "1104-03",
+    "1104-04",
+    "3113-03",
+    "3113-04",
+    "2522-02",
+    "5114-05",
+    "1107-03",
+    "1107-04",
+    "2206-07",
+    "2206-08",
+    "4241-06",
+    "4241-07",
+    "4241-08",
+    "2522-03",
+    "2241-02",
+    "3106-02",
+    "3106-03",
+    "5305-02",
+    "2523-13",
+    "2106-05",
+    "1104-02",
+    "5132-02"
+  ]
+}

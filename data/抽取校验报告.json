@@ -1,0 +1,14 @@
+{
+  "records": 2368,
+  "institutions": 848,
+  "pagesWithRows": 82,
+  "minRowsPerPage": 21,
+  "maxRowsPerPage": 29,
+  "scoreMin": 463,
+  "scoreMax": 686,
+  "warnings": 0,
+  "warningSamples": [],
+  "errors": [],
+  "output": "/Users/ginger/Documents/Codex/2026-06-12/joeseesun-qiaomu-goal-meta-skill/outputs/jiangsu-university-explorer/data/投档线-2025-物理类.json",
+  "jsOutput": "/Users/ginger/Documents/Codex/2026-06-12/joeseesun-qiaomu-goal-meta-skill/outputs/jiangsu-university-explorer/data/投档线-2025-物理类.js"
+}

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="江苏省2025年普通类物理等科目类招生计划与本科批投档线查询">
+  <title>经纬志愿 · 江苏2025物理类招生计划</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="gateOverlay" class="gate-overlay">
+    <div class="gate-card">
+      <span class="gate-mark" aria-hidden="true">经纬</span>
+      <h2 class="gate-title">经纬志愿</h2>
+      <p class="gate-subtitle">江苏2025 · 物理类招生计划</p>
+      <label for="gatePassword" class="gate-label">请输入访问密码</label>
+      <div class="gate-field">
+        <input id="gatePassword" type="password" autocomplete="off" placeholder="密码由分享者提供" class="gate-input">
+        <button id="gateSubmit" type="button" class="gate-submit">进入</button>
+      </div>
+      <p id="gateError" class="gate-error" hidden>密码不正确，请确认后重试</p>
+      <p class="gate-hint">本工具仅供定向分享使用，请勿随意传播链接与密码</p>
+    </div>
+  </div>
+
+  <div id="appContent" hidden>
+  <div class="scope-notice" role="note">
+    <strong>数据范围</strong>
+    <span>2025年 · 普通类 · 物理等科目类</span>
+    <span class="scope-divider" aria-hidden="true"></span>
+    <span>已接入招生计划与本科批投档线 · 不含历史类</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="经纬志愿首页">
+      <span class="brand-mark" aria-hidden="true">经纬</span>
+      <span class="brand-copy">
+        <strong>经纬志愿</strong>
+        <small>JIANGSU · ADMISSION ATLAS</small>
+      </span>
+    </a>
+    <div class="header-meta">
+      <span>招生计划数据版</span>
+      <span class="meta-divider"></span>
+      <span>2025 / 物理类</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">江苏省普通高校招生 · 物理等科目类</p>
+        <h1>学校、专业、计划，<br>现在<span>一起查。</span></h1>
+        <p class="hero-description">
+          查询全国院校在江苏省2025年普通类物理等科目类的招生专业组和组内专业，
+          核对计划人数、学制、学费；本科批专业组同时关联2025年投档最低分。
+        </p>
+        <div class="hero-badges" aria-label="数据摘要">
+          <span><strong id="heroRecordCount">—</strong> 个专业组</span>
+          <span><strong id="heroProgramCount">—</strong> 个专业条目</span>
+          <span><strong id="heroPlanCount">—</strong> 人计划</span>
+        </div>
+      </div>
+      <div class="score-compass" aria-hidden="true">
+        <div class="compass-ring ring-outer"></div>
+        <div class="compass-ring ring-inner"></div>
+        <div class="compass-card">
+          <span>本科批投档最低分</span>
+          <strong><b id="heroMinScore">—</b>–<b id="heroMaxScore">—</b></strong>
+          <small>PHYSICS · 2025</small>
+        </div>
+        <span class="compass-point point-a"></span>
+        <span class="compass-point point-b"></span>
+        <span class="compass-point point-c"></span>
+      </div>
+    </section>
+
+    <section class="data-source" aria-labelledby="sourceTitle">
+      <div>
+        <p class="section-index">SOURCE / 数据依据</p>
+        <h2 id="sourceTitle">两份文件，计划与投档互相印证</h2>
+      </div>
+      <div class="source-detail">
+        <p id="sourceName">正在读取数据文件…</p>
+        <span>招生计划仅取上册第66–226页的普通类物理方向；每条结果保留计划书PDF页码，历史、体育、艺术类均未导入。</span>
+        <div class="source-links">
+          <a href="source/2025年江苏省招生计划（上册）(OCR).pdf" target="_blank" rel="noopener">查看招生计划原始 PDF →</a>
+          <a href="source/09-33-5302461102655621.pdf" target="_blank" rel="noopener">查看2025物理类本科批投档线 PDF →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="explorer" aria-labelledby="resultTitle">
+      <aside class="filter-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-index">01 / 查询条件</p>
+            <h2>定位学校与专业</h2>
+          </div>
+          <button id="resetButton" class="text-button" type="button">清空</button>
+        </div>
+
+        <div class="field">
+          <label for="keywordSearch">院校、专业、代号或专业组</label>
+          <div class="input-shell">
+            <span aria-hidden="true">⌕</span>
+            <input id="keywordSearch" type="search" placeholder="如：南京大学 / 人工智能 / 1101" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="filter-grid">
+          <div class="field">
+            <label for="batchFilter">招生批次</label>
+            <select id="batchFilter">
+              <option value="">全部批次</option>
+              <option value="本科院校">本科院校</option>
+              <option value="提前录取本科院校">提前录取本科院校</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="subjectFilter">再选科目</label>
+            <select id="subjectFilter">
+              <option value="">全部要求</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="scoreFilter">投档线状态</label>
+            <select id="scoreFilter">
+              <option value="">全部状态</option>
+              <option value="matched">已匹配本科批投档线</option>
+              <option value="unmatched">未匹配投档线</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cooperationFilter">是否中外合作办学</label>
+            <select id="cooperationFilter">
+              <option value="">全部</option>
+              <option value="yes">是</option>
+              <option value="no">否</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="minPlan">专业组计划不少于</label>
+            <input id="minPlan" class="score-input" type="number" min="0" inputmode="numeric" placeholder="不限">
+          </div>
+          <div class="field">
+            <label for="minScore">投档最低分不低于</label>
+            <input id="minScore" class="score-input" type="number" min="0" max="750" inputmode="numeric" placeholder="不限">
+          </div>
+          <div class="field field-wide">
+            <label for="sortOrder">结果排序</label>
+            <select id="sortOrder">
+              <option value="plan-desc">招生计划：多到少</option>
+              <option value="score-desc">投档最低分：高到低</option>
+              <option value="code-asc">院校代号：小到大</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-note">
+          <strong>使用提醒</strong>
+          <p>招生计划和投档最低分均为2025年数据。2026年招生计划公布后需要重新接入，不能把本页数据直接当作2026年依据。</p>
+        </div>
+      </aside>
+
+      <div class="results-panel">
+        <div class="results-heading">
+          <div>
+            <p class="section-index">02 / 查询结果</p>
+            <h2 id="resultTitle">物理类招生计划索引</h2>
+          </div>
+          <div class="result-totals" aria-live="polite">
+            <span><strong id="resultCount">0</strong> 条</span>
+            <span><strong id="institutionCount">0</strong> 个代号</span>
+          </div>
+        </div>
+
+        <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+        <div id="resultList" class="result-list"></div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <span aria-hidden="true">○</span>
+          <h3>没有匹配的招生计划</h3>
+          <p>请检查关键词，或放宽批次、科目、计划人数与分数条件。</p>
+          <button id="emptyResetButton" class="text-button" type="button">查看全部记录</button>
+        </div>
+
+        <nav id="pagination" class="pagination" aria-label="查询结果分页" hidden>
+          <button id="previousPage" type="button">上一页</button>
+          <span id="pageIndicator">第 1 / 1 页</span>
+          <button id="nextPage" type="button">下一页</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="limitations" aria-labelledby="limitsTitle">
+      <p class="section-index">SCOPE / 本版边界</p>
+      <h2 id="limitsTitle">范围清楚，数据才好用</h2>
+      <div class="limit-grid">
+        <article>
+          <span>01</span>
+          <h3>只取物理类</h3>
+          <p>仅导入普通类（物理等科目类），历史、体育、艺术类全部排除。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>保留原页核对</h3>
+          <p>扫描表格经本地OCR结构化，每个专业组保留招生计划书PDF页码。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>年份严格区分</h3>
+          <p>当前是2025版；2026年数据发布后需单独更新，不混用年份。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>经纬志愿 · 江苏2025普通类物理类招生计划查询</p>
+    <p>只呈现用户提供 PDF 中可核验的信息 · 不作为志愿填报建议</p>
+  </footer>
+  </div><!-- /appContent -->
+
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailTitle">
+    <div class="dialog-topline">
+      <span>2025 招生计划详情 / SOURCE TRACE</span>
+      <button id="closeDialogButton" class="close-button" type="button" aria-label="关闭详情">×</button>
+    </div>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="data/招生计划-2025-物理类.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
